@@ -1,27 +1,23 @@
-const inputValue=document.querySelector("#text")
-const search = document.querySelector("#btn")
+const inputValue = document.querySelector('#text');
+const search = document.querySelector('#btn');
+const image = document.querySelector('.image');
+const form = document.querySelector('form');
 
-
-
-
-search.addEventListener("click",()=>{
-  console.log(inputValue.value)
-  fetch("http://localhost:2220/search",{
-    method:"POST",
-    body: inputValue.value
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  image.innerHTML = '';
+  fetch('/search', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ search: inputValue.value }),
   })
-  .then(response => response.json()
-  .then(data => { console.log(data);
-    })
-  );
-})
-
-
-
-
-// , {
-    // headers : { 
-    //   'Content-Type': 'application/json',
-    //   'Accept': 'application/json'
-    //  }
-//   }
+    .then((response) => response.json()
+      .then((data) => {
+        data.results.forEach(element => {
+          const photo = document.createElement('img');
+          photo.src = element.urls.full;
+          photo.setAttribute('class', 'photo');
+          image.appendChild(photo);
+        });
+      }));
+});
