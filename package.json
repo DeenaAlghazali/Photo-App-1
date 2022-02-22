@@ -1,0 +1,25 @@
+{
+  "name": "deena-wessal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G11/Deena-Wessal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G11/Deena-Wessal/issues"
+  },
+  "homepage": "https://github.com/GSG-G11/Deena-Wessal#readme",
+  "dependencies": {
+    "eslint": "^8.9.0",
+    "express": "^4.17.3",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.15"
+  }
+}
