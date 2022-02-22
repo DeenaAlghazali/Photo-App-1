@@ -16,7 +16,6 @@ app.get('/search', (req, res) =>{
     .then(response => {
         return response.json()
     }).then(data =>{
-         console.log(data)
          res.json(data);
         })
     .catch ((err) => {
