@@ -1,11 +1,46 @@
-body {
-    text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.photo {
-    width: 200px;
-    height: 200px;
+body {
+  background-color: rgb(179, 218, 218);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 60px;
+}
+
+form {
+  margin-top: 40px;
+}
+
+#text,
+#btn {
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+#btn {
+  width: 5%;
+}
+.image{
     display: flex;
-    /* flex-direction:row ; */
     flex-wrap: wrap;
-    margin: 20px;
+    justify-content: center;
+}
+
+
+.photo {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  /* border: 1px red solid; */
+  border-radius: 10px;
 }
