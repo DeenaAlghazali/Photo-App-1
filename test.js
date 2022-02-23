@@ -1,4 +1,3 @@
-// const { expect } = require('@jest/globals');
 const superTest = require('supertest')
 const app = require('./src/app')
 
@@ -8,7 +7,6 @@ superTest(app)
 .expect(200)
 .end((error,response) =>{
     if(error) return done(error);
-    // expect(response.statusCode).toBe(200)
     done();
 })
 })
