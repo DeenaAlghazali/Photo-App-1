@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
   })
     .then((response) => response.json()
       .then((data) => {
-        data.results.forEach(element => {
+        data.results.forEach((element) => {
           const photo = document.createElement('img');
           photo.src = element.urls.full;
           photo.setAttribute('class', 'photo');
