@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 require('dotenv').config();
+require('env2')('.env');
 
 const apiKey = process.env.API_KEY;
 
