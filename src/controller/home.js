@@ -3,9 +3,9 @@ require('dotenv').config();
 
 const apiKey = process.env.API_KEY;
 
-const search = (req, res) => {
+const home = (req, res) => {
   fetch(
-    `https://api.unsplash.com/search/photos?query=${req.body.search}&page=1&client_id=${apiKey}`,
+    `https://api.unsplash.com/photos?page=1&client_id=${apiKey}`,
   )
     .then((response) => response.json())
     .then((data) => {
@@ -16,4 +16,4 @@ const search = (req, res) => {
     });
 };
 
-module.exports = search;
+module.exports = home;
