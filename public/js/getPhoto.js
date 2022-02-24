@@ -1,7 +1,6 @@
 fetch('/getPhoto')
   .then((response) => response.json()
     .then((data) => {
-      console.log(data);
       data.forEach((element) => {
         const photo1 = document.createElement('img');
         photo1.src = element.urls.full;
